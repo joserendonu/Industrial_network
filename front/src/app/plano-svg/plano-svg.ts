@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './plano-svg.css'
 })
 export class PlanoSvg {
+  selectedPiece: string | null = null;
 
+  selectPiece(piece: string) {
+    this.selectedPiece = piece;
+  }
 }

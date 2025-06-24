@@ -9,4 +9,11 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected title = 'front';
+  // NUEVO CODIGO 
+   selectedPiece: string | null = null;
+
+  selectPiece(piece: string) {
+    this.selectedPiece = piece;
+  }
+  // FIN NUEVO CODIGO
 }
