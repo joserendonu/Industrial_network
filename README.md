@@ -1,4 +1,4 @@
-# Industrial_network
+# Industrial_network BACK
 Industrial_network
 
 TAREA
@@ -12,3 +12,18 @@ opcional QUE SE PUEDA ENTRA A CADA SENSOR Y MIRAR ESPECIFICACIONES MAS DETALLADA
 imagenes SSSSVVVVGGG *************************************************************
 ejm posible vista: file:///C:/Users/jose/AppData/Local/Microsoft/Windows/INetCache/IE/E8IGI2U3/plano_topografico_agricola_AJL_con_invernadero[1].pdf
 verificar que se pueda cambiar colores(que se pueda hacer interactivo)
+
+
+
+# Industrial_network FRONT
+
+
+
+ORGANIZAR NUEVO CODIGO
+ESTO IMPLICA ORGANIZARLO EN LOS ARCHIVOS DEL COMPONENTE Y LLAMAR ESOS COMPONENTES DESDE LA INTERFAZ PRINCIPAL
+
+REVISAR ESTO:
+El "endpoint" de tu componente sería /plano.
+Lo enrutas en app-routing.module.ts.
+El componente se muestra en <router-outlet>.
+

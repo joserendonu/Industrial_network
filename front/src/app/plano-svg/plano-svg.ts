@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-plano-svg',
+  standalone: true, // <-- Agrega esta línea
   imports: [],
   templateUrl: './plano-svg.html',
   styleUrl: './plano-svg.css'
