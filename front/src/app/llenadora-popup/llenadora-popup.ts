@@ -1,8 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input , Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-llenadora-popup',
   standalone: true,
+  templateUrl: './llenadora-popup.html',
+  styleUrls: ['./llenadora-popup.css'],
   template: `
     <div class="popup-backdrop" (click)="close()"></div>
     <div class="popup">
@@ -29,8 +31,9 @@ export class LlenadoraPopupComponent {
   @Input() temperatura: number = 25;
   @Input() porcentajeLleno: number = 80;
   @Input() numeroCerezas: number = 120;
+  @Output() close = new EventEmitter<void>();
 
-  close() {
-    // Este método será sobreescrito por el padre
+  cerrar() {
+    this.close.emit();
   }
 }

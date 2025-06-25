@@ -1,1 +1,9 @@
 <p>llenadora-popup works!</p>
+<div class="popup-backdrop"></div>
+<div class="popup">
+  <h2>Llenadora</h2>
+  <p><strong>Temperatura:</strong> {{ temperatura }} °C</p>
+  <p><strong>Porcentaje lleno:</strong> {{ porcentajeLleno }}%</p>
+  <p><strong>Número de cerezas:</strong> {{ numeroCerezas }}</p>
+  <button (click)="cerrar()">Cerrar</button>
+</div>
