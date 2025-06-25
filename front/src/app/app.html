@@ -315,7 +315,7 @@
 
 
 <!-- NUEVO CODIGO GILBERT -->
-<svg width="500" height="300" style="border:1px solid #ccc;">
+<svg viewBox="0 0 500 300" style="width: 100%; max-width: 500px; height: auto; border:1px solid #ccc;">
   <rect x="10" y="10" width="480" height="280" fill="#f5f5f5" stroke="#888" stroke-width="2" />
 
   <!-- Llenadora -->
@@ -346,6 +346,11 @@
   <rect x="400" y="182" width="20" height="16" fill="#fff" stroke="#b71c1c" stroke-width="2" rx="4" />
   <line x1="420" y1="190" x2="490" y2="190" stroke="#b71c1c" stroke-width="4" />
 </svg>
+<div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+  <button (click)="actualizarDatos()" style="margin: 12px 0 16px 0; padding: 8px 20px; font-size: 16px;">
+    Actualizar
+  </button>
+</div>
 <app-llenadora-popup *ngIf="showLlenadoraPopup"
   [temperatura]="llenadoraData.temperatura"
   [porcentajeLleno]="llenadoraData.porcentajeLleno"
@@ -353,5 +358,6 @@
   (close)="closeLlenadoraPopup()"></app-llenadora-popup>
 <div *ngIf="selectedPiece" style="margin-top: 16px;">
   <strong>Seleccionaste:</strong> {{selectedPiece}}
-</div><!-- FIN NUEV CODIGO -->
+</div>
+<!-- FIN NUEV CODIGO -->
 <router-outlet />
