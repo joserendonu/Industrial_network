@@ -1,20 +1,36 @@
+
+
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-// import {PlanoSvg} from './plano-svg/plano-svg';
+import { LlenadoraPopupComponent } from './llenadora-popup/llenadora-popup';
+import { NgIf } from '@angular/common'; // <-- IMPORTANTE
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [NgIf, RouterOutlet, LlenadoraPopupComponent], // <-- AGREGA NgIf AQUÍ
+
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   protected title = 'front';
-  // NUEVO CODIGO 
-   selectedPiece: string | null = null;
+  selectedPiece: string | null = null;
+  showLlenadoraPopup = false;
+
+  llenadoraData = {
+    temperatura: 25,
+    porcentajeLleno: 80,
+    numeroCerezas: 120
+  };
 
   selectPiece(piece: string) {
     this.selectedPiece = piece;
+    if (piece === 'Llenadora') {
+      this.showLlenadoraPopup = true;
+    }
   }
-  // FIN NUEVO CODIGO
+
+  closeLlenadoraPopup() {
+    this.showLlenadoraPopup = false;
+  }
 }
