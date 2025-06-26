@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-plano-svg',
@@ -8,7 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './plano-svg.css'
 })
 export class PlanoSvg {
-  selectedPiece: string | null = null;
+  @Input() selectedPiece: string | null = null;
+
 
   selectPiece(piece: string) {
     this.selectedPiece = piece;

@@ -23,6 +23,12 @@ export class App {
     numeroCerezas: 120
   };
 
+  regadoraData = {
+    temperatura: 30,
+    porcentajeLleno: 70,
+    numeroCerezas: 90
+  };
+
   selectPiece(piece: string) {
     this.selectedPiece = piece;
     if (piece === 'Llenadora') {
@@ -35,19 +41,33 @@ export class App {
   }
   // ...existing code...
   actualizarDatos() {
-    // Simula variaciones aleatorias
-    const variacionPorcentaje = Math.floor(Math.random() * 11) - 5; // -5 a +5
-    const nuevaTemp = this.llenadoraData.temperatura + (Math.random() * 2 - 1); // +/-1 grado
-    let nuevoPorcentaje = this.llenadoraData.porcentajeLleno + variacionPorcentaje;
-    nuevoPorcentaje = Math.max(0, Math.min(100, nuevoPorcentaje));
-    // Relaciona cerezas con porcentaje lleno (ejemplo: 1% = 1.5 cerezas)
-    const nuevasCerezas = Math.round(nuevoPorcentaje * 1.5);
+    // Llenadora
+    const variacionPorcentajeLlenadora = Math.floor(Math.random() * 11) - 5; // -5 a +5
+    const nuevaTempLlenadora = this.llenadoraData.temperatura + (Math.random() * 2 - 1); // +/-1 grado
+    let nuevoPorcentajeLlenadora = this.llenadoraData.porcentajeLleno + variacionPorcentajeLlenadora;
+    nuevoPorcentajeLlenadora = Math.max(0, Math.min(100, nuevoPorcentajeLlenadora));
+    const nuevasCerezasLlenadora = Math.round(nuevoPorcentajeLlenadora * 1.5);
 
     this.llenadoraData = {
-      temperatura: Math.round(nuevaTemp * 10) / 10,
-      porcentajeLleno: nuevoPorcentaje,
-      numeroCerezas: nuevasCerezas
+      temperatura: Math.round(nuevaTempLlenadora * 10) / 10,
+      porcentajeLleno: nuevoPorcentajeLlenadora,
+      numeroCerezas: nuevasCerezasLlenadora
+    };
+
+    // Regadora
+    const variacionPorcentajeRegadora = Math.floor(Math.random() * 11) - 5; // -5 a +5
+    const nuevaTempRegadora = this.regadoraData.temperatura + (Math.random() * 2 - 1); // +/-1 grado
+    let nuevoPorcentajeRegadora = this.regadoraData.porcentajeLleno + variacionPorcentajeRegadora;
+    nuevoPorcentajeRegadora = Math.max(0, Math.min(100, nuevoPorcentajeRegadora));
+    const nuevasCerezasRegadora = Math.round(nuevoPorcentajeRegadora * 1.5);
+
+    this.regadoraData = {
+      temperatura: Math.round(nuevaTempRegadora * 10) / 10,
+      porcentajeLleno: nuevoPorcentajeRegadora,
+      numeroCerezas: nuevasCerezasRegadora
     };
   }
-  // ...existing code...
+  closeRegadoraPanel() {
+    this.selectedPiece = null;
+  }
 }
