@@ -4,5 +4,10 @@
   <p><strong>Temperatura:</strong> {{ temperatura }} °C</p>
   <p><strong>Porcentaje lleno:</strong> {{ porcentajeLleno }}%</p>
   <p><strong>Número de cerezas:</strong> {{ numeroCerezas }}</p>
+  <p><strong>Presión:</strong> {{ presion ?? '1.2 bar' }}</p>
+  <p><strong>Velocidad de llenado:</strong> {{ velocidadLlenado ?? '15 L/min' }}</p>
+  <p><strong>Estado de válvula:</strong> {{ estadoValvula ?? 'Abierta' }}</p>
+  <p><strong>Última limpieza:</strong> {{ ultimaLimpieza ?? '2025-06-20' }}</p>
+  <p><strong>Alarma activa:</strong> {{ alarmaActiva ?? 'Ninguna' }}</p>
   <button (click)="cerrar()">Cerrar</button>
 </div>

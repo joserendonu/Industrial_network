@@ -1,4 +1,4 @@
-import { Component, Input , Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-llenadora-popup',
@@ -32,6 +32,11 @@ export class LlenadoraPopupComponent {
   @Input() porcentajeLleno: number = 80;
   @Input() numeroCerezas: number = 120;
   @Output() close = new EventEmitter<void>();
+  @Input() presion: number = 25;
+  @Input() velocidadLlenado: number = 25;
+  @Input() estadoValvula: string = "activa";
+  @Input() ultimaLimpieza: string = "16/10/2023";
+  @Input() alarmaActiva: string = "sin alarma";
 
   cerrar() {
     this.close.emit();
