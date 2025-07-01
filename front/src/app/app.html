@@ -362,16 +362,89 @@
   style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start; width: 100vw; height: 100vh; margin: 0; padding: 0;">
   <div style="flex: 1 1 0; height: 100vh; display: flex; flex-direction: column;">
     <svg viewBox="0 0 500 300" style="width: 100%; height: 100%; border:1px solid #ccc; display: block;">
-      <!-- ...tu SVG... -->
+      <!-- Fondo tierra más clara para contraste -->
       <rect x="10" y="17" width="480" height="280" fill="#f5f5f5" stroke="#888" stroke-width="2" />
+      <!-- Surcos animados en escala de verdes, DETRÁS de todo -->
+      <g>
+        <g>
+          <path id="surco1" fill="none" stroke="#388e3c" stroke-width="12"
+            d="M30,40 Q60,60 90,40 T150,40 T210,40 T270,40 T330,40 T390,40 T450,40" />
+          <animate xlink:href="#surco1" attributeName="d" values="
+          M30,40 Q60,60 90,40 T150,40 T210,40 T270,40 T330,40 T390,40 T450,40;
+          M40,40 Q70,60 100,40 T160,40 T220,40 T280,40 T340,40 T400,40 T460,40;
+          M30,40 Q60,60 90,40 T150,40 T210,40 T270,40 T330,40 T390,40 T450,40" dur="3s" repeatCount="indefinite" />
+        </g>
+        <g>
+          <path id="surco2" fill="none" stroke="#43a047" stroke-width="12"
+            d="M30,70 Q60,90 90,70 T150,70 T210,70 T270,70 T330,70 T390,70 T450,70" />
+          <animate xlink:href="#surco2" attributeName="d" values="
+          M30,70 Q60,90 90,70 T150,70 T210,70 T270,70 T330,70 T390,70 T450,70;
+          M40,70 Q70,90 100,70 T160,70 T220,70 T280,70 T340,70 T400,70 T460,70;
+          M30,70 Q60,90 90,70 T150,70 T210,70 T270,70 T330,70 T390,70 T450,70" dur="3s" repeatCount="indefinite" />
+        </g>
+        <g>
+          <path id="surco3" fill="none" stroke="#66bb6a" stroke-width="12"
+            d="M30,100 Q60,120 90,100 T150,100 T210,100 T270,100 T330,100 T390,100 T450,100" />
+          <animate xlink:href="#surco3" attributeName="d" values="
+          M30,100 Q60,120 90,100 T150,100 T210,100 T270,100 T330,100 T390,100 T450,100;
+          M40,100 Q70,120 100,100 T160,100 T220,100 T280,100 T340,100 T400,100 T460,100;
+          M30,100 Q60,120 90,100 T150,100 T210,100 T270,100 T330,100 T390,100 T450,100" dur="3s"
+            repeatCount="indefinite" />
+        </g>
+        <g>
+          <path id="surco4" fill="none" stroke="#388e3c" stroke-width="12"
+            d="M30,130 Q60,150 90,130 T150,130 T210,130 T270,130 T330,130 T390,130 T450,130" />
+          <animate xlink:href="#surco4" attributeName="d" values="
+          M30,130 Q60,150 90,130 T150,130 T210,130 T270,130 T330,130 T390,130 T450,130;
+          M40,130 Q70,150 100,130 T160,130 T220,130 T280,130 T340,130 T400,130 T460,130;
+          M30,130 Q60,150 90,130 T150,130 T210,130 T270,130 T330,130 T390,130 T450,130" dur="3s"
+            repeatCount="indefinite" />
+        </g>
+        <g>
+          <path id="surco5" fill="none" stroke="#43a047" stroke-width="12"
+            d="M30,160 Q60,180 90,160 T150,160 T210,160 T270,160 T330,160 T390,160 T450,160" />
+          <animate xlink:href="#surco5" attributeName="d" values="
+          M30,160 Q60,180 90,160 T150,160 T210,160 T270,160 T330,160 T390,160 T450,160;
+          M40,160 Q70,180 100,160 T160,160 T220,160 T280,160 T340,160 T400,160 T460,160;
+          M30,160 Q60,180 90,160 T150,160 T210,160 T270,160 T330,160 T390,160 T450,160" dur="3s"
+            repeatCount="indefinite" />
+        </g>
+        <g>
+          <path id="surco6" fill="none" stroke="#66bb6a" stroke-width="12"
+            d="M30,190 Q60,210 90,190 T150,190 T210,190 T270,190 T330,190 T390,190 T450,190" />
+          <animate xlink:href="#surco6" attributeName="d" values="
+          M30,190 Q60,210 90,190 T150,190 T210,190 T270,190 T330,190 T390,190 T450,190;
+          M40,190 Q70,210 100,190 T160,190 T220,190 T280,190 T340,190 T400,190 T460,190;
+          M30,190 Q60,210 90,190 T150,190 T210,190 T270,190 T330,190 T390,190 T450,190" dur="3s"
+            repeatCount="indefinite" />
+        </g>
+        <g>
+          <path id="surco7" fill="none" stroke="#388e3c" stroke-width="12"
+            d="M30,220 Q60,240 90,220 T150,220 T210,220 T270,220 T330,220 T390,220 T450,220" />
+          <animate xlink:href="#surco7" attributeName="d" values="
+          M30,220 Q60,240 90,220 T150,220 T210,220 T270,220 T330,220 T390,220 T450,220;
+          M40,220 Q70,240 100,220 T160,220 T220,220 T280,220 T340,220 T400,220 T460,220;
+          M30,220 Q60,240 90,220 T150,220 T210,220 T270,220 T330,220 T390,220 T450,220" dur="3s"
+            repeatCount="indefinite" />
+        </g>
+        <!-- Nueva línea verde abajo -->
+        <g>
+          <path id="surco8" fill="none" stroke="#43a047" stroke-width="12"
+            d="M30,260 Q60,280 90,260 T150,260 T210,260 T270,260 T330,260 T390,260 T450,260" />
+          <animate xlink:href="#surco8" attributeName="d" values="
+          M30,260 Q60,280 90,260 T150,260 T210,260 T270,260 T330,260 T390,260 T450,260;
+          M40,260 Q70,280 100,260 T160,260 T220,260 T280,260 T340,260 T400,260 T460,260;
+          M30,260 Q60,280 90,260 T150,260 T210,260 T270,260 T330,260 T390,260 T450,260" dur="3s"
+            repeatCount="indefinite" />
+        </g>
+      </g>
+      <!-- Tus otros elementos SVG encima del fondo animado -->
       <rect x="20" y="20" width="100" height="60" fill="#4caf50" stroke="#333" stroke-width="2"
         (click)="selectPiece('Llenadora')" [attr.opacity]="selectedPiece === 'Llenadora' ? 0.7 : 1" />
       <text x="70" y="55" text-anchor="middle" fill="#fff" font-size="16">Sensor1</text>
-      <!-- ...dentro de tu SVG, después del rect y text de la llenadora... -->
       <rect x="20" y="20" width="100" height="60" fill="#4caf50" stroke="#333" stroke-width="2"
         (click)="selectPiece('Llenadora')" [attr.opacity]="selectedPiece === 'Llenadora' ? 0.7 : 1" />
       <text x="70" y="45" text-anchor="middle" fill="#fff" font-size="16">Sensor1</text>
-      <!-- Datos pequeños dentro del cuadro de la llenadora, alineados a la izquierda y debajo del título -->
       <g>
         <text x="28" y="60" font-size="7" fill="#fff">
           Temp: {{llenadoraData.temperatura}}°C
@@ -405,8 +478,7 @@
       (close)="closeLlenadoraPopup()"></app-llenadora-popup>
   </div>
   <!-- Panel lateral Regadora -->
-  <div *ngIf="selectedPiece === 'Regadora'"
-    style="margin-left: 32px; min-width: 220px; background: #f8f8ff;
+  <div *ngIf="selectedPiece === 'Regadora'" style="margin-left: 32px; min-width: 220px; background: #f8f8ff;
      border: 1px solid #2196f3; border-radius: 8px; padding: 20px; height: auto;">
     <h3 style="color: #2196f3; margin-top: 0;">Estación2</h3>
     <div><strong>Temperatura:</strong> {{regadoraData.temperatura}} °C</div>
@@ -417,6 +489,8 @@
     </button>
   </div>
 </div>
+<!-- ...existing code... -->
+<!-- ...existing code... -->
 <router-outlet />
 <!-- FIN NUEVO CODIGO  -->
 <router-outlet />
