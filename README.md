@@ -27,3 +27,10 @@ El "endpoint" de tu componente sería /plano.
 Lo enrutas en app-routing.module.ts.
 El componente se muestra en <router-outlet>.
 
+TAREA 18 JULIO 2025 
+SE INTENTA QUE LAS ANIMACIONES 3D QUEDEN EN LOS ELEMENTOS INTERNOS 
+PERO INTENTO FRACASADO
+
+
+TAREA 24 JULIO 
+PONER EL PLANO COMO COMPONENTE 
